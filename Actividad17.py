@@ -77,22 +77,22 @@ class Limpiar:
 operaciones_matematicas = OperacionesMatematicas(ventana, entrada, entrada2)
 limpiar_ventana = Limpiar(ventana, entrada, entrada2)
 
-boton_sumar = tk.Button(ventana, text="Sumar", command=operaciones_matematicas.calcular_suma, relief ="raised",bd = 3,activebackground ="grey")
-boton_sumar.pack(pady=5)
+boton_sumar = tk.Button(ventana, text="Sumar", command=operaciones_matematicas.calcular_suma, relief ="raised",bd = 3,activebackground ="grey",width=8, height=1,activeforeground="white")
+boton_sumar.pack(pady=7)
 
-boton_multiplicar = tk.Button(ventana, text="multiplicar", command=operaciones_matematicas.calcular_multiplicacion, relief ="raised",bd = 3,activebackground ="grey")
-boton_multiplicar.pack(pady=5)
+boton_multiplicar = tk.Button(ventana, text="multiplicar", command=operaciones_matematicas.calcular_multiplicacion, relief ="raised",bd = 3,activebackground ="grey",width=8, height=1,activeforeground="white")
+boton_multiplicar.pack(pady=7)
 
-boton_restar = tk.Button(ventana, text="restar", command=operaciones_matematicas.calcular_resta, relief ="raised",bd = 3,activebackground ="grey")
-boton_restar.pack(pady=5)
+boton_restar = tk.Button(ventana, text="restar", command=operaciones_matematicas.calcular_resta, relief ="raised",bd = 3,activebackground ="grey",width=8, height=1,activeforeground="white")
+boton_restar.pack(pady=7)
 
-boton_dividir = tk.Button(ventana, text="dividir", command=operaciones_matematicas.calcular_dividir, relief ="raised",bd = 3,activebackground ="grey")
-boton_dividir.pack(pady=5)
+boton_dividir = tk.Button(ventana, text="dividir", command=operaciones_matematicas.calcular_dividir, relief ="raised",bd = 3,activebackground ="grey",width=8, height=1,activeforeground="white")
+boton_dividir.pack(pady=7)
 
-boton_limpiar = tk.Button(ventana, text="Limpiar", command=limpiar_ventana.limpiar, relief ="raised",bd = 3,activebackground ="grey")
-boton_limpiar.pack(pady=5)
+boton_limpiar = tk.Button(ventana, text="Limpiar", command=limpiar_ventana.limpiar, relief ="raised",bd = 3,activebackground ="grey",width=8, height=1,activeforeground="white")
+boton_limpiar.pack(pady=7)
 
-boton_salir = tk.Button(ventana, text="Salir", command=ventana.quit, relief ="raised",bd = 3,activebackground ="grey")
-boton_salir.pack(pady=5)
+boton_salir = tk.Button(ventana, text="Salir", command=ventana.quit, relief ="raised",bd = 3,activebackground ="grey",width=8, height=1,activeforeground="white")
+boton_salir.pack(pady=7)
 
 ventana.mainloop()
