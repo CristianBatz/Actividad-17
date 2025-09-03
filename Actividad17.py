@@ -31,31 +31,31 @@ class OperacionesMatematicas:
         self.resultado = 0
 
     def calcular_suma(self):
-        num1 = int(self.entrada.get())
-        num2 = int(self.entrada2.get())
+        num1 = float(self.entrada.get())
+        num2 = float(self.entrada2.get())
         self.resultado = num1 + num2
-        etiqueta3.config(text=f"El resultado de la suma es: {int(self.resultado)}")
+        etiqueta3.config(text=f"El resultado de la suma es: {float(self.resultado)}")
 
     def calcular_multiplicacion(self):
-        num1 = int(self.entrada.get())
-        num2 = int(self.entrada2.get())
+        num1 = float(self.entrada.get())
+        num2 = float(self.entrada2.get())
         self.resultado = num1 * num2
-        etiqueta3.config(text=f"El resultado de la multiplicacion es: {int(self.resultado)}")
+        etiqueta3.config(text=f"El resultado de la multiplicacion es: {float(self.resultado)}")
 
     def calcular_resta(self):
-        num1 = int(self.entrada.get())
-        num2 = int(self.entrada2.get())
+        num1 = float(self.entrada.get())
+        num2 = float(self.entrada2.get())
         self.resultado = num1 - num2
-        etiqueta3.config(text=f"El resultado de la resta es: {int(self.resultado)}")
+        etiqueta3.config(text=f"El resultado de la resta es: {float(self.resultado)}")
 
     def calcular_dividir(self):
-        num1 = int(self.entrada.get())
-        num2 = int(self.entrada2.get())
+        num1 = float(self.entrada.get())
+        num2 = float(self.entrada2.get())
         if num2 == 0:
             etiqueta3.config(text=f"No se puede dividir entre {num2}")
         else:
             self.resultado = num1 / num2
-            etiqueta3.config(text=f"El resultado de la division es: {int(self.resultado)}")
+            etiqueta3.config(text=f"El resultado de la division es: {float(self.resultado)}")
 
 class Limpiar:
     def __init__(self, ventana, entrada, entrada2):
@@ -77,22 +77,22 @@ class Limpiar:
 operaciones_matematicas = OperacionesMatematicas(ventana, entrada, entrada2)
 limpiar_ventana = Limpiar(ventana, entrada, entrada2)
 
-boton_sumar = tk.Button(ventana, text="Sumar", command=operaciones_matematicas.calcular_suma)
+boton_sumar = tk.Button(ventana, text="Sumar", command=operaciones_matematicas.calcular_suma, relief ="raised",bd = 3,activebackground ="grey")
 boton_sumar.pack(pady=5)
 
-boton_multiplicar = tk.Button(ventana, text="multiplicar", command=operaciones_matematicas.calcular_multiplicacion)
+boton_multiplicar = tk.Button(ventana, text="multiplicar", command=operaciones_matematicas.calcular_multiplicacion, relief ="raised",bd = 3,activebackground ="grey")
 boton_multiplicar.pack(pady=5)
 
-boton_restar = tk.Button(ventana, text="restar", command=operaciones_matematicas.calcular_resta)
+boton_restar = tk.Button(ventana, text="restar", command=operaciones_matematicas.calcular_resta, relief ="raised",bd = 3,activebackground ="grey")
 boton_restar.pack(pady=5)
 
-boton_dividir = tk.Button(ventana, text="dividir", command=operaciones_matematicas.calcular_dividir)
+boton_dividir = tk.Button(ventana, text="dividir", command=operaciones_matematicas.calcular_dividir, relief ="raised",bd = 3,activebackground ="grey")
 boton_dividir.pack(pady=5)
 
-boton_limpiar = tk.Button(ventana, text="Limpiar", command=limpiar_ventana.limpiar)
+boton_limpiar = tk.Button(ventana, text="Limpiar", command=limpiar_ventana.limpiar, relief ="raised",bd = 3,activebackground ="grey")
 boton_limpiar.pack(pady=5)
 
-boton_salir = tk.Button(ventana, text="Salir", command=ventana.quit)
+boton_salir = tk.Button(ventana, text="Salir", command=ventana.quit, relief ="raised",bd = 3,activebackground ="grey")
 boton_salir.pack(pady=5)
 
 ventana.mainloop()
