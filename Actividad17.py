@@ -3,21 +3,22 @@ import tkinter as tk
 ventana = tk.Tk()
 ventana.title("Calculadora ")
 ventana.geometry("300x200")
+ventana.config(bg = "black")
 
-etiqueta0 = tk.Label(ventana, text="Calculadora python",font=("Arial", 20,"bold"),bg="blue",fg="white")
+etiqueta0 = tk.Label(ventana, text="Calculadora python",font=("Arial", 20,"bold"),bg="grey",fg="white")
 etiqueta0.pack(pady=5)
 
-etiqueta = tk.Label(ventana, text="Escriba el primer numero: ",font=("Arial", 10,"bold"),bg="sky blue",fg="white")
+etiqueta = tk.Label(ventana, text="Escriba el primer numero: ",font=("Arial", 10,"bold"),bg="grey",fg="white")
 etiqueta.pack(pady=5)
 entrada = tk.Entry(ventana)
 entrada.pack(pady=5)
 
-etiqueta2 = tk.Label(ventana, text="Escriba el segundo numero: ",font=("Arial", 10,"bold"),bg="sky blue",fg="white")
+etiqueta2 = tk.Label(ventana, text="Escriba el segundo numero: ",font=("Arial", 10,"bold"),bg="grey",fg="white")
 etiqueta2.pack(pady=5)
 entrada2 = tk.Entry(ventana)
 entrada2.pack(pady=5)
 
-etiqueta3 = tk.Label(ventana, text="Resultado: ")
+etiqueta3 = tk.Label(ventana, text="Resultado: ",font=("Arial", 10,"bold"),bg="grey",fg="black")
 etiqueta3.pack(pady=5)
 
 
