@@ -17,8 +17,6 @@ entrada2.pack(pady=5)
 etiqueta3 = tk.Label(ventana, text="Resultado: ")
 etiqueta3.pack(pady=5)
 
-etiqueta4 = tk.Label(ventana, text="Suma ")
-etiqueta4.pack(pady=5)
 
 
 class OperacionesMatematicas:
@@ -40,9 +38,36 @@ class OperacionesMatematicas:
         self.resultado = num1 * num2
         etiqueta5.config(text=self.resultado)
 
+    def calcular_resta(self):
+        num1 = int(self.entrada.get())
+        num2 = int(self.entrada2.get())
+        self.resultado = num1 - num2
+        etiqueta5.config(text=self.resultado)
+
+    def calcular_dividir(self):
+        num1 = int(self.entrada.get())
+        num2 = int(self.entrada2.get())
+        self.resultado = num1 / num2
+        etiqueta5.config(text=self.resultado)
+
+class Limpiar:
+    def __init__(self, ventana, entrada, entrada2):
+        self.ventana = ventana
+        self.entrada = entrada
+        self.entrada2 = entrada2
+        self.resultado = 0
+
+    def limpiar(self):
+        entrada.delete(0, tk.END)
+        entrada2.delete(0, tk.END)
+        self.resultado = 0
+
+
 
 
 operaciones_matematicas = OperacionesMatematicas(ventana, entrada, entrada2)
+etiqueta4 = tk.Label(ventana, text="Suma ")
+etiqueta4.pack(pady=5)
 boton_sumar = tk.Button(ventana, text="Sumar", command=operaciones_matematicas.calcular_suma)
 boton_sumar.pack(pady=5)
 
@@ -51,6 +76,17 @@ etiqueta5.pack(pady=5)
 
 boton_multiplicar = tk.Button(ventana, text="multiplicar", command=operaciones_matematicas.calcular_multiplicacion)
 boton_multiplicar.pack(pady=5)
+
+etiqueta6 = tk.Label(ventana, text="resta")
+etiqueta6.pack(pady=5)
+boton_restar = tk.Button(ventana, text="restar", command=operaciones_matematicas.calcular_resta)
+boton_restar.pack(pady=5)
+
+etiqueta7 = tk.Label(ventana, text="division ")
+etiqueta7.pack(pady=5)
+boton_dividir = tk.Button(ventana, text="dividir", command=operaciones_matematicas.calcular_dividir)
+boton_dividir.pack(pady=5)
+
 
 
 
