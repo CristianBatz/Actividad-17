@@ -4,12 +4,15 @@ ventana = tk.Tk()
 ventana.title("Calculadora ")
 ventana.geometry("300x200")
 
-etiqueta = tk.Label(ventana, text="Escriba el primer numero: ")
+etiqueta0 = tk.Label(ventana, text="Calculadora python",font=("Arial", 20,"bold"),bg="blue",fg="white")
+etiqueta0.pack(pady=5)
+
+etiqueta = tk.Label(ventana, text="Escriba el primer numero: ",font=("Arial", 10,"bold"),bg="sky blue",fg="white")
 etiqueta.pack(pady=5)
 entrada = tk.Entry(ventana)
 entrada.pack(pady=5)
 
-etiqueta2 = tk.Label(ventana, text="Escriba el segundo numero: ")
+etiqueta2 = tk.Label(ventana, text="Escriba el segundo numero: ",font=("Arial", 10,"bold"),bg="sky blue",fg="white")
 etiqueta2.pack(pady=5)
 entrada2 = tk.Entry(ventana)
 entrada2.pack(pady=5)
@@ -47,10 +50,10 @@ class OperacionesMatematicas:
     def calcular_dividir(self):
         num1 = int(self.entrada.get())
         num2 = int(self.entrada2.get())
-        self.resultado = num1 / num2
         if num2 == 0:
             etiqueta3.config(text=f"No se puede dividir entre {num2}")
         else:
+            self.resultado = num1 / num2
             etiqueta3.config(text=f"El resultado de la division es: {int(self.resultado)}")
 
 class Limpiar:
@@ -64,10 +67,7 @@ class Limpiar:
         entrada.delete(0, tk.END)
         entrada2.delete(0, tk.END)
         etiqueta3.config(text="Resultado: ")
-        etiqueta4.config(text="Suma")
-        etiqueta5.config(text="Multiplicacion")
-        etiqueta6.config(text="Resta")
-        etiqueta7.config(text="Dividir")
+
         self.resultado = 0
 
 
@@ -75,24 +75,16 @@ class Limpiar:
 
 operaciones_matematicas = OperacionesMatematicas(ventana, entrada, entrada2)
 limpiar_ventana = Limpiar(ventana, entrada, entrada2)
-etiqueta4 = tk.Label(ventana, text="Suma")
-etiqueta4.pack(pady=5)
+
 boton_sumar = tk.Button(ventana, text="Sumar", command=operaciones_matematicas.calcular_suma)
 boton_sumar.pack(pady=5)
-
-etiqueta5 = tk.Label(ventana, text="multiplicacion ")
-etiqueta5.pack(pady=5)
 
 boton_multiplicar = tk.Button(ventana, text="multiplicar", command=operaciones_matematicas.calcular_multiplicacion)
 boton_multiplicar.pack(pady=5)
 
-etiqueta6 = tk.Label(ventana, text="resta")
-etiqueta6.pack(pady=5)
 boton_restar = tk.Button(ventana, text="restar", command=operaciones_matematicas.calcular_resta)
 boton_restar.pack(pady=5)
 
-etiqueta7 = tk.Label(ventana, text="division ")
-etiqueta7.pack(pady=5)
 boton_dividir = tk.Button(ventana, text="dividir", command=operaciones_matematicas.calcular_dividir)
 boton_dividir.pack(pady=5)
 
