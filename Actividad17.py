@@ -5,23 +5,23 @@ ventana.title("Calculadora ")
 ventana.geometry("300x200")
 ventana.config(bg = "#1e1e1e")
 
-etiqueta0 = tk.Label(ventana, text="Calculadora python",font=("Arial", 20,"bold"),bg="#1e1e1e",fg="white")
+etiqueta0 = tk.Label(ventana, text="Calculadora python",font=("Arial", 20,"bold italic"),bg="#1e1e1e",fg="white")
 etiqueta0.pack(pady=5)
 
-etiqueta = tk.Label(ventana, text="Escriba el primer numero ",font=("Arial", 10,"bold"),bg="#1e1e1e",fg="white")
+etiqueta = tk.Label(ventana, text="Escriba el primer numero ",font=("Arial", 10,"bold italic"),bg="#1e1e1e",fg="white")
 etiqueta.pack(pady=5)
-entrada = tk.Entry(ventana)
+entrada = tk.Entry(ventana,bg="#abc5e0", fg="black", relief="flat",highlightbackground="#3a3a3a", highlightcolor="#007acc", highlightthickness=2)
 entrada.pack(pady=5)
 
-etiqueta2 = tk.Label(ventana, text="Escriba el segundo numero ",font=("Arial", 10,"bold"),bg="#1e1e1e",fg="white")
+etiqueta2 = tk.Label(ventana, text="Escriba el segundo numero ",font=("Arial", 10,"bold italic"),bg="#1e1e1e",fg="white")
 etiqueta2.pack(pady=5)
-entrada2 = tk.Entry(ventana)
+entrada2 = tk.Entry(ventana,bg="#abc5e0", fg="black", relief="flat",highlightbackground="#3a3a3a", highlightcolor="#007acc", highlightthickness=2)
 entrada2.pack(pady=5)
 
-etiquetaR = tk.Label(ventana, text="Resultado ",font=("Arial", 10,"bold"),bg="#1e1e1e",fg="white")
+etiquetaR = tk.Label(ventana, text="Resultado ",font=("Arial", 10,"bold italic"),bg="#1e1e1e",fg="white")
 etiquetaR.pack(pady=5)
 
-etiqueta3 = tk.Label(ventana,font=("Arial", 10,"bold"),bg="#1e1e1e",fg="white")
+etiqueta3 = tk.Label(ventana,font=("Arial", 10,"bold italic"),bg="#1e1e1e",fg="white")
 etiqueta3.pack(pady=5)
 
 
@@ -37,19 +37,19 @@ class OperacionesMatematicas:
         num1 = float(self.entrada.get())
         num2 = float(self.entrada2.get())
         self.resultado = num1 + num2
-        etiqueta3.config(text=f"El resultado de la suma es: {float(self.resultado)}")
+        etiqueta3.config(text=f"El resultado de la suma es: {self.resultado:.2f}")
 
     def calcular_multiplicacion(self):
         num1 = float(self.entrada.get())
         num2 = float(self.entrada2.get())
         self.resultado = num1 * num2
-        etiqueta3.config(text=f"El resultado de la multiplicacion es: {float(self.resultado)}")
+        etiqueta3.config(text=f"El resultado de la multiplicacion es: {self.resultado:.2f}")
 
     def calcular_resta(self):
         num1 = float(self.entrada.get())
         num2 = float(self.entrada2.get())
         self.resultado = num1 - num2
-        etiqueta3.config(text=f"El resultado de la resta es: {float(self.resultado)}")
+        etiqueta3.config(text=f"El resultado de la resta es: {self.resultado:.2f}")
 
     def calcular_dividir(self):
         num1 = float(self.entrada.get())
@@ -58,7 +58,7 @@ class OperacionesMatematicas:
             etiqueta3.config(text=f"No se puede dividir entre {num2}")
         else:
             self.resultado = num1 / num2
-            etiqueta3.config(text=f"El resultado de la division es: {float(self.resultado)}")
+            etiqueta3.config(text=f"El resultado de la division es: {self.resultado:.2f}")
 
 class Limpiar:
     def __init__(self, ventana, entrada, entrada2):
@@ -70,8 +70,7 @@ class Limpiar:
     def limpiar(self):
         entrada.delete(0, tk.END)
         entrada2.delete(0, tk.END)
-        etiqueta3.config(text= "",font=("Arial", 10,"bold"),bg="black",fg="white")
-
+        etiqueta3.config(text= "",font=("Arial", 10,"bold italic"),bg="black",fg="white")
         self.resultado = 0
 
 
@@ -80,25 +79,25 @@ class Limpiar:
 operaciones_matematicas = OperacionesMatematicas(ventana, entrada, entrada2)
 limpiar_ventana = Limpiar(ventana, entrada, entrada2)
 
-etiquetaP = tk.Label(ventana, text="Operaciones ",font=("Arial", 10,"bold"),bg="#1e1e1e",fg="white")
+etiquetaP = tk.Label(ventana, text="Operaciones ",font=("Arial", 10,"bold italic"),bg="#1e1e1e",fg="white")
 etiquetaP.pack(pady=5)
 
-boton_sumar = tk.Button(ventana, text="Sumar", command=operaciones_matematicas.calcular_suma, relief ="raised",bd = 3,activebackground ="grey",width=8, height=1,activeforeground="white")
+boton_sumar = tk.Button(ventana, text="Sumar", command=operaciones_matematicas.calcular_suma, relief ="raised",bd = 3,activebackground ="grey",width=8, height=1,activeforeground="white",font=("Arial", 10,"bold italic"))
 boton_sumar.pack(pady=7)
 
-boton_multiplicar = tk.Button(ventana, text="multiplicar", command=operaciones_matematicas.calcular_multiplicacion, relief ="raised",bd = 3,activebackground ="grey",width=8, height=1,activeforeground="white")
+boton_multiplicar = tk.Button(ventana, text="multiplicar", command=operaciones_matematicas.calcular_multiplicacion, relief ="raised",bd = 3,activebackground ="grey",width=8, height=1,activeforeground="white",font=("Arial", 10,"bold italic"))
 boton_multiplicar.pack(pady=7)
 
-boton_restar = tk.Button(ventana, text="restar", command=operaciones_matematicas.calcular_resta, relief ="raised",bd = 3,activebackground ="grey",width=8, height=1,activeforeground="white")
+boton_restar = tk.Button(ventana, text="restar", command=operaciones_matematicas.calcular_resta, relief ="raised",bd = 3,activebackground ="grey",width=8, height=1,activeforeground="white",font=("Arial", 10,"bold italic"))
 boton_restar.pack(pady=7)
 
-boton_dividir = tk.Button(ventana, text="dividir", command=operaciones_matematicas.calcular_dividir, relief ="raised",bd = 3,activebackground ="grey",width=8, height=1,activeforeground="white")
+boton_dividir = tk.Button(ventana, text="dividir", command=operaciones_matematicas.calcular_dividir, relief ="raised",bd = 3,activebackground ="grey",width=8, height=1,activeforeground="white",font=("Arial", 10,"bold italic"))
 boton_dividir.pack(pady=7)
 
-boton_limpiar = tk.Button(ventana, text="Limpiar", command=limpiar_ventana.limpiar, relief ="raised",bd = 3,activebackground ="grey",width=8, height=1,activeforeground="white")
+boton_limpiar = tk.Button(ventana, text="Limpiar", command=limpiar_ventana.limpiar, relief ="raised",bd = 3,activebackground ="grey",width=8, height=1,activeforeground="white",font=("Arial", 10,"bold italic"))
 boton_limpiar.pack(pady=7)
 
-boton_salir = tk.Button(ventana, text="Salir", command=ventana.quit, relief ="raised",bd = 3,activebackground ="grey",width=8, height=1,activeforeground="white")
+boton_salir = tk.Button(ventana, text="Salir", command=ventana.quit, relief ="raised",bd = 3,activebackground ="grey",width=8, height=1,activeforeground="white",font=("Arial", 10,"bold italic"))
 boton_salir.pack(pady=7)
 
 ventana.mainloop()
