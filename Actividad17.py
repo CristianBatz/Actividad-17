@@ -18,7 +18,7 @@ etiqueta2.pack(pady=5)
 entrada2 = tk.Entry(ventana,bg="#abc5e0", fg="black", relief="flat",highlightbackground="#3a3a3a", highlightcolor="#007acc", highlightthickness=2)
 entrada2.pack(pady=5)
 
-etiquetaR = tk.Label(ventana, text="Resultado ",font=("Arial", 10,"bold italic"),bg="#1e1e1e",fg="white")
+etiquetaR = tk.Label(ventana, text="Resultado ",relief ="raised",font=("Arial", 10,"bold italic"),bg="#1e1e1e",fg="white")
 etiquetaR.pack(pady=5)
 
 etiqueta3 = tk.Label(ventana,font=("Arial", 10,"bold italic"),bg="#1e1e1e",fg="white")
