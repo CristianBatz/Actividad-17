@@ -20,6 +20,9 @@ entrada2.place(x=200, y=100, width=150)
 
 etiquetaR = tk.Label(ventana, text="Resultado ",font=("Arial", 10,"bold italic"),bg="#1e1e1e",fg="white")
 etiquetaR.place(x=20, y=140)
+etiquetaR = tk.Label(ventana, text="Resultado ",relief ="raised",font=("Arial", 10,"bold italic"),bg="#1e1e1e",fg="white")
+etiquetaR.pack(pady=5)
+
 etiqueta3 = tk.Label(ventana,font=("Arial", 10,"bold italic"),bg="#1e1e1e",fg="white")
 etiqueta3.place(x=200, y=140)
 
