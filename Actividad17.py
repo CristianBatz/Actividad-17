@@ -82,22 +82,22 @@ limpiar_ventana = Limpiar(ventana, entrada, entrada2)
 etiquetaP = tk.Label(ventana, text="Operaciones ",font=("Arial", 10,"bold italic"),bg="#1e1e1e",fg="white")
 etiquetaP.pack(pady=5)
 
-boton_sumar = tk.Button(ventana, text="Sumar", command=operaciones_matematicas.calcular_suma, relief ="raised",bd = 3,activebackground ="grey",width=8, height=1,activeforeground="white",font=("Arial", 10,"bold italic"))
+boton_sumar = tk.Button(ventana, text="Sumar",bg="#abc5e0", command=operaciones_matematicas.calcular_suma, relief ="raised",bd = 3,activebackground ="grey",width=8, height=1,activeforeground="white",font=("Arial", 10,"bold italic"))
 boton_sumar.pack(pady=7)
 
-boton_multiplicar = tk.Button(ventana, text="multiplicar", command=operaciones_matematicas.calcular_multiplicacion, relief ="raised",bd = 3,activebackground ="grey",width=8, height=1,activeforeground="white",font=("Arial", 10,"bold italic"))
+boton_multiplicar = tk.Button(ventana, text="multiplicar",bg="#abc5e0", command=operaciones_matematicas.calcular_multiplicacion, relief ="raised",bd = 3,activebackground ="grey",width=8, height=1,activeforeground="white",font=("Arial", 10,"bold italic"))
 boton_multiplicar.pack(pady=7)
 
-boton_restar = tk.Button(ventana, text="restar", command=operaciones_matematicas.calcular_resta, relief ="raised",bd = 3,activebackground ="grey",width=8, height=1,activeforeground="white",font=("Arial", 10,"bold italic"))
+boton_restar = tk.Button(ventana, text="restar",bg="#abc5e0", command=operaciones_matematicas.calcular_resta, relief ="raised",bd = 3,activebackground ="grey",width=8, height=1,activeforeground="white",font=("Arial", 10,"bold italic"))
 boton_restar.pack(pady=7)
 
-boton_dividir = tk.Button(ventana, text="dividir", command=operaciones_matematicas.calcular_dividir, relief ="raised",bd = 3,activebackground ="grey",width=8, height=1,activeforeground="white",font=("Arial", 10,"bold italic"))
+boton_dividir = tk.Button(ventana, text="dividir",bg="#abc5e0", command=operaciones_matematicas.calcular_dividir, relief ="raised",bd = 3,activebackground ="grey",width=8, height=1,activeforeground="white",font=("Arial", 10,"bold italic"))
 boton_dividir.pack(pady=7)
 
-boton_limpiar = tk.Button(ventana, text="Limpiar", command=limpiar_ventana.limpiar, relief ="raised",bd = 3,activebackground ="grey",width=8, height=1,activeforeground="white",font=("Arial", 10,"bold italic"))
+boton_limpiar = tk.Button(ventana, text="Limpiar",bg="#abc5e0", command=limpiar_ventana.limpiar, relief ="raised",bd = 3,activebackground ="grey",width=8, height=1,activeforeground="white",font=("Arial", 10,"bold italic"))
 boton_limpiar.pack(pady=7)
 
-boton_salir = tk.Button(ventana, text="Salir", command=ventana.quit, relief ="raised",bd = 3,activebackground ="grey",width=8, height=1,activeforeground="white",font=("Arial", 10,"bold italic"))
+boton_salir = tk.Button(ventana, text="Salir",bg="#abc5e0", command=ventana.quit, relief ="raised",bd = 3,activebackground ="grey",width=8, height=1,activeforeground="white",font=("Arial", 10,"bold italic"))
 boton_salir.pack(pady=7)
 
 ventana.mainloop()
